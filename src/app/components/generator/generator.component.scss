@@ -10,6 +10,8 @@
 
 
   p {
+    width: 512px;
+    word-wrap: break-word;
     @apply text-white;
     @apply font-black;
     @apply text-center;
