@@ -1,11 +1,12 @@
 .image-container {
-  background: url('../../../assets/background.jpg');
+  background: url('../../../assets/background.png');
   width: 512px;
   height: 512px;
 
   @apply flex ;
   @apply flex-col;
   @apply justify-between ;
+
 
 
   p {
@@ -16,3 +17,9 @@
   }
 }
 
+
+img {
+  @apply m-10;
+  @apply border-8;
+  @apply border-black;
+}

@@ -1,0 +1,19 @@
+<h1 class="text-5xl font-black m-10">Simple meme generator</h1>
+
+<input type="text" placeholder="Upper text" [(ngModel)]="upperText" class="border-2 p-1.5 m-3">
+<input type="text" placeholder="Bottom text" [(ngModel)]="bottomText" class="border-2 p-1.5 m-3">
+<button (click)="generateImage()" [disabled]="!this.upperText && !this.bottomText"class="bg-blue-600 m-2 p-3 text-white rounded disabled:opacity-50">Generate</button>
+<div class="m-10">
+  <div class="image-container" #container>
+    <p>{{upperText}}</p>
+    <p class="mb-2">{{bottomText}}</p>
+  </div>
+</div>
+
+<h2 class="text-3xl font-black m-10">Output</h2>
+<img [src]="url || '../../../assets/background.png' " alt="output">
+<button [disabled]="!canDownload" class="bg-blue-600 m-2 p-3 text-white rounded disabled:opacity-50">
+  <a [href]="url" [download]="randomFileName">Download Image </a>
+  </button>
+
+<footer class="text-center text-2xl text-gray-400 m-5">Version 1.0</footer>

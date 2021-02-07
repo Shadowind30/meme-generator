@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { FormComponent } from './components/form/form.component';
-import { ImageContainerComponent } from './components/image-container/image-container.component';
+import {FormsModule} from '@angular/forms';
 
+import { GeneratorComponent } from './components/generator/generator.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent,
-    ImageContainerComponent
+    GeneratorComponent
   ],
+
   imports: [
-    BrowserModule
+    BrowserModule,
+    CommonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
