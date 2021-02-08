@@ -13,7 +13,8 @@
 <h2 class="text-3xl font-black m-10">Output</h2>
 <img [src]="url || '../../../assets/background.png' " alt="output">
 <button [disabled]="!canDownload" class="bg-blue-600 m-2 p-3 text-white rounded disabled:opacity-50">
-  <a [href]="url" [download]="randomFileName">Download Image </a>
+  <a class="hover:text-gray-900" [href]="url" [download]="randomFileName" *ngIf="canDownload">Download Image </a>
+  <p *ngIf="!canDownload">Download Image</p>
   </button>
 
 <footer class="text-center text-2xl text-gray-400 m-5">Version 1.0</footer>
