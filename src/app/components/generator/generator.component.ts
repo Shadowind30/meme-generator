@@ -8,6 +8,7 @@ import * as htmlToImage from 'html-to-image';
 })
 export class GeneratorComponent{
   @ViewChild('container') container: ElementRef<HTMLDivElement>;
+  @ViewChild('file') file: ElementRef<HTMLInputElement>;
   public url: string;
 
   public upperText: string = ''
@@ -30,6 +31,10 @@ export class GeneratorComponent{
   public generateFileName(): void {
     const randomNumber = (Math.random() * 10000000).toFixed(0);
     this.randomFileName =  'meme-' + randomNumber + '.png';
+  }
+
+  public showInfo(): void {
+    console.log(this.file);
   }
 
 

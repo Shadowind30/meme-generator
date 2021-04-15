@@ -2,6 +2,7 @@
 
 <input type="text" placeholder="Upper text" [(ngModel)]="upperText" class="border-2 p-1.5 m-3">
 <input type="text" placeholder="Bottom text" [(ngModel)]="bottomText" class="border-2 p-1.5 m-3">
+<input type="file" #file (change)="showInfo()"/>
 <button (click)="generateImage()" [disabled]="!this.upperText && !this.bottomText"class="bg-blue-600 m-2 p-3 text-white rounded disabled:opacity-50">Generate</button>
 <div class="m-10">
   <div class="image-container" #container>
